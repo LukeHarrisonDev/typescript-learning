@@ -10,3 +10,7 @@ function render(document: any) {
 }
 
 let numbers: number[] = []
+
+
+//Tuples
+let user: [number, string] = [1, "Luke"]
