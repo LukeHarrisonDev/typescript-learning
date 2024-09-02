@@ -21,11 +21,28 @@ function calculateTax(income, taxYear = 2022) {
     }
 }
 calculateTax(10000, 2023);
-let employee = { id: 1,
+let employee = { id: 1, name: "Luke", askForRaise: (str) => { console.log(str); } };
+employee.askForRaise("Please can I have a raise?");
+let employee1 = {
+    id: 27,
     name: "Luke",
     askForRaise: (str) => {
         console.log(str);
     }
 };
-employee.askForRaise("Please can I have a raise?");
+let employee2 = {
+    id: 28,
+    name: "Jessica",
+    askForRaise: (str) => {
+        console.log(str);
+    }
+};
+function kgToLbs(weight) {
+    if (typeof weight === "number") {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
 //# sourceMappingURL=index.js.map

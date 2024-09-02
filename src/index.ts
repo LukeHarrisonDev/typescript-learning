@@ -43,3 +43,34 @@ let employee: {readonly id: number, name: string, askForRaise: (str: string) => 
 
 
 employee.askForRaise("Please can I have a raise?")
+
+// Type Alias
+type Employee = {
+    readonly id: number,
+    name: string,
+    askforRaise: (str: string) => void
+}
+
+let employee1 = {
+    id: 27,
+    name: "Luke",
+    askForRaise: (str: string) => {
+        console.log(str)
+    }
+}
+
+let employee2 = {
+    id: 28,
+    name: "Jessica",
+    askForRaise: (str: string) => {
+        console.log(str)
+    }
+}
+// Union Types
+function kgToLbs(weight: number | string): number {
+    if (typeof weight === "number") {
+        return weight * 2.2
+    } else {
+        return parseInt(weight) * 2.2
+    }
+}
