@@ -98,3 +98,16 @@ type Quantity = 50 | 100
 let quantity: Quantity // Can only ever be 50 or 100
 
 type Metric = "cm" | "inch"
+
+// Nullable Types
+function greet(name: string | null | undefined) {
+    if(name) {
+        console.log(name.toUpperCase())
+    } else {
+        console.log("Hi!")
+    }
+}
+
+greet(null)
+
+// So you can't use null or undefined unless you say so in the parameters, but you should account for this in the function
