@@ -74,3 +74,21 @@ function kgToLbs(weight: number | string): number {
         return parseInt(weight) * 2.2
     }
 }
+
+//Intersection Types
+let weight: number & string
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
